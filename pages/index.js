@@ -2,18 +2,15 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Results from "../components/Results";
-import requests from "../utils/requests";
+import requests from "../requests";
 
 export default function Home(results) {
-  console.log(props);
   return (
     <div>
       <Head>
         <title>Hulu</title>
         <link rel="icon" href=""></link>
       </Head>
-
-      {/* Header */}
       <Header />
       <Nav />
 
@@ -22,7 +19,7 @@ export default function Home(results) {
   );
 }
 
-//Server render will happen first then client render
+//Server side render
 export async function getServerSideProps(context) {
   const genre = context.query.genre;
 

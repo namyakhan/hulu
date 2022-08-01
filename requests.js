@@ -1,5 +1,4 @@
 const API_KEY = process.env.API_KEY;
-
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   fetchTrending: {
@@ -8,7 +7,7 @@ export default {
   },
   fetchTopRated: {
     title: "Top Rated",
-    url: `/movies/top_rated?api_key=${API_KEY}&language=en-US`,
+    url: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
   },
   fetchActionMovies: {
     title: "Action",
@@ -31,7 +30,7 @@ export default {
     url: `/discover/movie?api_key=${API_KEY}&with_genres=9648`,
   },
   fetchSciFi: {
-    title: "SciFi",
+    title: "Sci-Fi",
     url: `/discover/movie?api_key=${API_KEY}&with_genres=878`,
   },
   fetchWestern: {
@@ -43,7 +42,7 @@ export default {
     url: `/discover/movie?api_key=${API_KEY}&with_genres=16`,
   },
   fetchTV: {
-    title: "TV Shows",
+    title: "TV Movie",
     url: `/discover/movie?api_key=${API_KEY}&with_genres=10770`,
   },
 };
